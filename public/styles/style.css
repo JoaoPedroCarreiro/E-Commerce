@@ -1,0 +1,40 @@
+:root {
+    --bg-color: white;
+    --txt-color: black;
+
+    --content-width: 1920px;
+
+    --logo-color: rgb(245, 81, 81);
+    --logo-color-lighter: rgb(255, 149, 149);
+    --logo-color-darker: rgb(133, 47, 47);
+    --rb-item-amount-color: rgb(238, 112, 112);
+
+    --carousel-button-color: rgb(245, 81, 81);
+
+    --footer-height: 240px;
+
+    --light-blue: #add8e6;
+    --gray: #242526;
+    --black: #000000;
+    --white: #ffffff;
+    --blue: #3f72ff;
+    --purple: #f263ff;
+    --pink: #ff9af7;
+    --brown: #3d2b1a;
+}
+
+* {
+    font-family: "Poppins", sans-serif;
+}
+
+main {
+    width: 100%;
+    min-height: 100vh;
+
+    position: relative;
+}
+
+@keyframes fadeInWhenStart {
+    0% { opacity: 0% }
+    100% { opacity: 100% }
+}
