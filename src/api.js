@@ -3,7 +3,7 @@ import axios from "axios"
 const cache = {}
 
 function createApi() {
-    const api = axios.create({ baseURL: "http://localhost:8080" })
+    const api = axios.create({ baseURL: "https://api-e-commerce-flax.vercel.app" })
 
     return {
         get: async (url) => {
