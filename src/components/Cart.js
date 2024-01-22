@@ -97,6 +97,8 @@ function Cart() {
         (async () => {
             const { data } = await api.get("/cart")
 
+            console.log(data)
+
             setCart(data)
             setIsLoading(false)
         })()
