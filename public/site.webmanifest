@@ -1,6 +1,6 @@
 {
     "name": "E-Commerce",
-    "short_name": "E-Commerce website using React, Bootstrap and Api data",
+    "short_name": "E-Commerce website using React and Api data",
     "icons": [
         {
             "src": "/favicon-16x16.png",
@@ -15,6 +15,16 @@
         {
             "src": "/apple-touch-icon.png",
             "sizes": "180x180",
+            "type": "image/png"
+        },
+        {
+            "src": "/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/android-chrome-512x512.png",
+            "sizes": "512x512",
             "type": "image/png"
         }
     ],
