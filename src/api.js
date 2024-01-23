@@ -9,26 +9,30 @@ function createApi() {
         get: async (url) => {
             if(cache[url]) return cache[url]
 
-            const res = await axios.get("https://apiecommerce-4zp0u4mh.b4a.run").then(res => {
-                console.log(res.data)
-                return res.data
-            }).catch(err => {
-                if (err.response) {
-                    console.log("Error Response")
-                    console.log(err.response.data)
-                    console.log(err.response.status)
-                    console.log(err.response.headers)
-                } else if (err.request) {
-                    console.log("Error Request")
-                    console.log(err.request)
-                } else {
-                    console.log("err Message")
-                    console.log('Error', err.message)
-                }
-            })
-            cache[url] = res
+            const res = await fetch("https://apiecommerce-4zp0u4mh.b4a.run")
+            const data = await res.json()
+            console.log(data)
 
-            return res
+            // const res = await axios.get("https://apiecommerce-4zp0u4mh.b4a.run").then(res => {
+            //     console.log("res data", res.data)
+            //     return res
+            // }).catch(err => {
+            //     if (err.response) {
+            //         console.log("Error Response")
+            //         console.log(err.response.data)
+            //         console.log(err.response.status)
+            //         console.log(err.response.headers)
+            //     } else if (err.request) {
+            //         console.log("Error Request")
+            //         console.log(err.request)
+            //     } else {
+            //         console.log("err Message")
+            //         console.log('Error', err.message)
+            //     }
+            // })
+            // cache[url] = res
+
+            // return res
         },
 
         post: async (url, data) => {
