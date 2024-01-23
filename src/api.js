@@ -9,11 +9,22 @@ function createApi() {
         get: async (url) => {
             if(cache[url]) return cache[url]
 
-            const res = await api.get(url).then(res => {
+            const res = await axios.get("https://apiecommerce-4zp0u4mh.b4a.run").then(res => {
+                console.log(res.data)
                 return res.data
             }).catch(err => {
-                console.log("Show error notification!")
-                return Promise.reject(err)
+                if (err.response) {
+                    console.log("Error Response")
+                    console.log(err.response.data)
+                    console.log(err.response.status)
+                    console.log(err.response.headers)
+                } else if (err.request) {
+                    console.log("Error Request")
+                    console.log(err.request)
+                } else {
+                    console.log("err Message")
+                    console.log('Error', err.message)
+                }
             })
             cache[url] = res
 
