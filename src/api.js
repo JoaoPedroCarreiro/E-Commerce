@@ -3,13 +3,18 @@ import axios from "axios"
 const cache = {}
 
 function createApi() {
-    const api = axios.create({ baseURL: "https://apiecommerce-4zp0u4mh.b4a.run" })
+    const api = axios.create({ baseURL: "https://apiecommerce-4zp0u4mh.b4a.run"})
     
     return {
         get: async (url) => {
             if(cache[url]) return cache[url]
 
-            const res = await api.get(url)
+            const res = await api.get(url).then(res => {
+                return res.data
+            }).catch(err => {
+                console.log("Show error notification!")
+                return Promise.reject(err)
+            })
             cache[url] = res
 
             return res
