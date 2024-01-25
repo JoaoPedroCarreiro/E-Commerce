@@ -9,15 +9,6 @@ function createApi() {
         get: async (url) => {
             if(cache[url]) return cache[url]
 
-            console.log("s")
-
-            // const res = await fetch("https://apiecommerce-4zp0u4mh.b4a.run/feminine", {
-            //     method: "GET",
-            //     mode: "cors"
-            // })
-            // const data = await res.json()
-            // console.log(data)
-
             const res = await api.get(url)
             cache[url] = res
 
