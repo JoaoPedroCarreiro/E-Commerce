@@ -89,14 +89,15 @@ function PageBase({ children }) {
                         <Logo as="link" />
                     </FooterDiv>
                     <FooterDiv title="Other Websites">
-                        <FooterItem href="/" target="_blank">Cherry Login</FooterItem>
+                        <FooterItem href="https://login-page-joaopedrocarreiros-projects.vercel.app" target="_blank">Cherry Login</FooterItem>
+                        <FooterItem href="https://music95.vercel.app" target="_blank">Cherry Music</FooterItem>
                     </FooterDiv>
                     <FooterDiv title="Useful Links">
-                        <FooterItem href="/" target="_blank">Portfolio</FooterItem>
+                        <FooterItem href="https://jpcarreirof.vercel.app" target="_blank">Portfolio</FooterItem>
                     </FooterDiv>
                     <FooterDiv title="Social">
                         <FooterItem icon="github" href="https://github.com/JoaoPedroCarreiro" target="_blank">Github</FooterItem>
-                        <FooterItem icon="linkedin" href="/" target="_blank">Linkedin</FooterItem>
+                        <FooterItem icon="linkedin" href="https://www.linkedin.com/in/jpcarreirof" target="_blank">Linkedin</FooterItem>
                     </FooterDiv>
                 </Footer>
             </StyledPageBase>
