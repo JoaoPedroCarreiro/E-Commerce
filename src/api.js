@@ -3,7 +3,7 @@ import axios from "axios"
 const cache = {}
 
 function createApi() {
-    const api = axios.create({ baseURL: "https://apiecommerce2-cplv2z65.b4a.run"})
+    const api = axios.create({ baseURL: "https://api-e-commerce-nflj.onrender.com"})
     
     return {
         get: async (url) => {
